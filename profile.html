@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Courses</a>
+        <a href="#">Settings</a>
+    </div>
+
+    <div class="header">
+        <div class="menu-icon" id="menu-toggle">&#9776;</div>
+        
+        <a href="start.html" class="signout-button">Signout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-card">
+            
+            <div class="grade-box">
+                70%
+            </div>
+            
+            <div class="info-group">
+                <span>Name: [User Name]</span>
+                <span>Course: [MCA/MBA/MSc]</span>
+                <span>Roll No: [User Roll No]</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

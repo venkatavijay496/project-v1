@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-card">
+        <h2>Sign Up</h2>
+
+        <div class="tab-group">
+            <div class="tab active" id="student-tab">Student</div> 
+            <div class="tab" id="admin-tab">Admin</div>
+        </div>
+
+        <form>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="rollno">Roll No:</label>
+                <input type="text" id="rollno" name="rollno" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <p class="login-text">Already registered? <a href="login.html">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById('student-tab').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('admin-tab').classList.remove('active');
+        });
+        document.getElementById('admin-tab').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('student-tab').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

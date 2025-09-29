@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-card">
+        <h2>Log In</h2>
+
+        <div class="tab-group">
+            <div class="tab active" id="student-tab">Student</div> 
+            <div class="tab" id="admin-tab">Admin</div>
+        </div>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="rollno">Roll No:</label>
+                <input type="text" id="rollno" name="rollno" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <p class="signup-text">New user? <a href="signup.html">Signup</a></p>
+    </div>
+
+    <script>
+        document.getElementById('student-tab').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('admin-tab').classList.remove('active');
+        });
+        document.getElementById('admin-tab').addEventListener('click', function() {
+            this.classList.add('active');
+            document.getElementById('student-tab').classList.remove('active');
+        });
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'profile.html';
+        });
+    </script>
+</body>
+</html>

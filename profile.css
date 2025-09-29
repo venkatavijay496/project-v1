@@ -1,0 +1,107 @@
+
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background-color: #f0f0f0; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /*Header and Navigation Bar */
+        .header {
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            border: 1px solid #ccc; /* Border around the 3-lines icon */
+            border-radius: 4px;
+        }
+        .signout-button {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .signout-button:hover {
+            background-color: #d0d0d0;
+        }
+
+        /* Sidebar Menu*/
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: -200px; /* first off-screen */
+            transition: left 0.3s;
+            z-index: 100;
+        }
+        .sidebar.open {
+            left: 0;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .profile-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 700px; /* Wider card for content */
+            display: flex;
+            gap: 50px;
+        }
+        
+        /* Profile */
+        .grade-box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .info-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+        .info-group span {
+            font-size: 1.1em;
+            color: #555;
+        }
